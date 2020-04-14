@@ -4,6 +4,7 @@ import BookShelf from './BookShelf'
 
 class AllBooks extends React.Component {
     render(){
+        // const bookShelfTitles = ['Currently Reading', 'Want to Read', 'Reading']
         return(
             <div className="list-books">
             <div className="list-books-title">
