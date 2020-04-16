@@ -1,6 +1,7 @@
 import React from 'react'
 import BookShelf from './BookShelf'
 
+
 class AllBooks extends React.Component {
   state = {
     /**
@@ -12,13 +13,15 @@ class AllBooks extends React.Component {
     showSearchPage: false
     
   }
+
+  bookShelfTitles = ['Currently Reading', 'Want to Read', 'Read']
+
   onButtonClick() {
     const boolean = this.state.showSearchPage == true ? false : true 
     this.setState({ showSearchPage: boolean })
   }
 
     render(){
-        // const bookShelfTitles = ['Currently Reading', 'Want to Read', 'Reading']
         return(
             <div className="list-books">
               
@@ -41,16 +44,17 @@ class AllBooks extends React.Component {
                 <div className="search-books-results">
                   <ol className="books-grid"></ol>
                 </div>
-              </div> : 
+              </div> 
+              : 
               <div>
                 <div className="list-books-title">
                   <h1>MyReads</h1>
                 </div>
                 <div className="list-books-content">
-                    <div>
-                      <BookShelf />
-                      <BookShelf />
-                      <BookShelf />
+                  <div>
+                  {this.bookShelfTitles.map( item => {
+                    return <BookShelf name={item} />
+                  })}
                     </div>
                 </div>
                 <div className="open-search">
