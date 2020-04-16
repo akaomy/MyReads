@@ -21,24 +21,6 @@ class AllBooks extends React.Component {
         // const bookShelfTitles = ['Currently Reading', 'Want to Read', 'Reading']
         return(
             <div className="list-books">
-              <div className="list-books-title">
-                <h1>MyReads</h1>
-              </div>
-              <div className="list-books-content">
-                  <div>
-                    <BookShelf />
-                    <BookShelf />
-                    <BookShelf />
-                  </div>
-              </div>
-                {/* once we click on add button
-                  onClick method will trigger method that will rewrite state to new one
-                  if set is true do this way
-                  if set is false do this way
-                */}
-              <div className="open-search">
-                <button onClick={() => this.onButtonClick()}>Add a book</button>
-              </div>
               
               {this.state.showSearchPage ? 
                 <div className="search-books">
@@ -59,7 +41,22 @@ class AllBooks extends React.Component {
                 <div className="search-books-results">
                   <ol className="books-grid"></ol>
                 </div>
-              </div> : console.log('books')
+              </div> : 
+              <div>
+                <div className="list-books-title">
+                  <h1>MyReads</h1>
+                </div>
+                <div className="list-books-content">
+                    <div>
+                      <BookShelf />
+                      <BookShelf />
+                      <BookShelf />
+                    </div>
+                </div>
+                <div className="open-search">
+                  <button onClick={() => this.onButtonClick()}>Add a book</button>
+                </div>
+              </div>
               }
             </div>
         )
