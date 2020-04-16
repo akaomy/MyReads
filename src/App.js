@@ -17,11 +17,6 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        {/* {this.state.showSearchPage ? (
-           <AddBook />
-        ) : (
-          <AllBooks />
-        )} */}
         <AllBooks />
       </div>
     )

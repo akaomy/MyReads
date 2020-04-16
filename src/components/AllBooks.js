@@ -13,7 +13,8 @@ class AllBooks extends React.Component {
     
   }
   onButtonClick() {
-    this.setState({ showSearchPage: true })
+    const boolean = this.state.showSearchPage == true ? false : true 
+    this.setState({ showSearchPage: boolean })
   }
 
     render(){
@@ -42,7 +43,7 @@ class AllBooks extends React.Component {
               {this.state.showSearchPage ? 
                 <div className="search-books">
                 <div className="search-books-bar">
-                  <button className="close-search" onClick={() => this.setState({ showSearchPage: true })}>Close</button>
+                  <button className="close-search" onClick={() => this.onButtonClick()}>Close</button>
                   <div className="search-books-input-wrapper">
                     {/*
                       NOTES: The search from BooksAPI is limited to a particular set of search terms.
