@@ -6,6 +6,7 @@ class AllBooks extends React.Component {
   state = {
     showSearchPage: false
   }
+  
   bookShelfTitles = [
     { 
       id: 1,
@@ -42,7 +43,6 @@ class AllBooks extends React.Component {
                     However, remember that the BooksAPI.search method DOES search by title or author. So, don't worry if
                     you don't find a specific author or title. Every search is limited by search terms.
                   */}
-                  {console.log(this.props.books)}
                   <input type="text" placeholder="Search by title or author"/>
                 </div>
               </div>
@@ -60,6 +60,9 @@ class AllBooks extends React.Component {
                 {this.bookShelfTitles.map( item => {
                   return <BookShelf key={item.id} name={item.book} />
                 })}
+                {/* {this.books.map(item => {
+                  return <li>{item.name}</li>
+                })} */}
                   </div>
               </div>
               <div className="open-search">
