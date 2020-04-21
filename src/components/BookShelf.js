@@ -5,7 +5,7 @@ class BookShelf extends React.Component {
     render() {
         return(
             <div className="bookshelf">
-                <h2 className="bookshelf-title">{this.props.name}</h2> {/* should go as props */}
+                <h2 className="bookshelf-title">{this.props.name}</h2>
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                     <li>
